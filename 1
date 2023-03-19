@@ -70,3 +70,35 @@ class External_Member extends Person
         return toString from super
                "Job name: " + job
                "Organization: " + organization
+
+
+class Movie
+    insert data variables (instance variables): String title of movie, String producer, 
+    int movie ID equals 1, int year of release, String availability
+    
+    constructor Movie(String title, String prod)
+        title of movie equals title
+        producer equals prod
+        ID equals (ID + 1)
+        availability equals "Available"
+        //2 parameters: title of movie and producer
+        
+    method testYear(int year) return boolean 
+        if(year less or equals 2023 and year more or equals 1895) //release year of the first movie
+            year of release equals year
+            print "Valid year"
+            return true
+        else
+            print "Invalid year"
+            return false
+        
+    getters //for all instance variables
+    
+    setters //for all instance variables except ID
+    
+    method toString returns String
+        return "Movie ID: " + movie ID
+               "Movie title: " + title of movie
+               "Producer: " + producer
+               "Release year: " + year of release
+               "Availability: " + availability
