@@ -1,1 +1,30 @@
-
+class Person
+    insert data variables (instance variables): int ID equals 10000, String first name, String last name, String phone number
+    
+    constructor Person(fname String, lname String) 
+        ID equals (ID + 1)
+        first name equals fname
+        last name equals lname
+        //constructor with 2 parameters: first name and last name
+        
+    method testPhone(phone String) returns boolean
+       if(characters in phone number equals 10 and (first 3 characters equal 514 or 438)
+            phone number (instance variable) equals phone
+            print "Valid phone number"
+            return true
+       else
+            print "Invalid phone number" 
+            return false
+        
+    getters //for all the instance variables
+    
+    setters //for the first name, last name and phone number
+        //no setter for ID because it cannot be changed
+        
+    method toString() return String
+        String str equals "ID: " + ID
+                          + "Name: " + first name + last name
+                          + "Phone number: " + phone number
+   
+class Student extends Person
+    insert data variables (instance variables)
