@@ -21,10 +21,35 @@ class Person
     setters //for the first name, last name and phone number
         //no setter for ID because it cannot be changed
         
-    method toString() return String
-        String str equals "ID: " + ID
-                          + "Name: " + first name + last name
-                          + "Phone number: " + phone number
+    method toString return String
+        return: "ID: " + ID
+                "Name: " + first name + last name
+                "Phone number: " + phone number
    
 class Student extends Person
-    insert data variables (instance variables)
+    insert data variables (instance variables): String school name, int grade
+
+    constructor Student(fname String, lname String, school String)
+        super from Person
+        school name equals school
+        //constructor with 3 paramenters: parameters from Person constrcutor and school name
+        
+    method testGrade(g int) return boolean
+        if(g is more or equal to 0 and g is less or equal to 100)
+            grade (instance variable) equals g
+            print "Valid grade"
+            return true
+        else
+            print "Invalid grade"
+            return fase
+            
+    getters //for school name and grade
+    
+    setters //for school name and grade
+    
+    method toString return String
+        return toString from super
+               "School name: " + school name
+               "Grade: " + grade
+               
+    
