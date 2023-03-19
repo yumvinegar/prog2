@@ -53,3 +53,20 @@ class Student extends Person
                "Grade: " + grade
                
     
+class External_Member extends Person
+    insert data variables (instance variables): String job, String organization
+
+    constructor External_Member(fname String, lname String, j String, org String)
+        super from Person
+        job equals j
+        organization equals org
+        //constructor with 4 paramenters: parameters from Person constructor, job and organization
+            
+    getters //for instance variables
+    
+    setters //for instance variables
+    
+    method toString return String
+        return toString from super
+               "Job name: " + job
+               "Organization: " + organization
