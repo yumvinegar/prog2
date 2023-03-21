@@ -7,7 +7,7 @@ class Person
         last name equals lname
         //constructor with 2 parameters: first name and last name
         
-    method testPhone(phone String) returns boolean
+    method testPhone(phone String, s String) returns boolean
        if(characters in phone number equals 10 and (first 3 characters equal 514 or 438)
             phone number (instance variable) equals phone
             print "Valid phone number"
@@ -47,6 +47,9 @@ class Student extends Person
     
     setters //for school name and grade
     
+    method setStatus() void
+        status equals "Student"
+    
     method toString return String
         return toString from super
                "School name: " + school name
@@ -66,6 +69,9 @@ class External_Member extends Person
     
     setters //for instance variables
     
+    method setStatus() void
+        status equals "External Member"
+    
     method toString return String
         return toString from super
                "Job name: " + job
@@ -74,7 +80,7 @@ class External_Member extends Person
 
 class Movie
     insert data variables (instance variables): String title of movie, String producer, 
-    int movie ID equals 1, int year of release, String availability
+    int movie ID equals 1, int year of release, String availability, Date rent date, Date return date
     
     constructor Movie(String title, String prod)
         title of movie equals title
