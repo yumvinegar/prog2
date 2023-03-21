@@ -1,12 +1,12 @@
 class Person
     insert data variables (instance variables): int ID equals 10000, 
-    String first name, String last name, String phone number, int money owed
+    String first name, String last name, int age, String phone number, int money owed
     
-    constructor Person(fname String, lname String) 
+    constructor Person(fname String, lname String, age int) 
         ID equals (ID + 1)
         first name equals fname
         last name equals lname
-        //constructor with 2 parameters: first name and last name
+        this age equals age
         
     method testPhone(phone String, s String) returns boolean
        if(characters in phone number equals 10 and (first 3 characters equal 514 or 438)
@@ -17,10 +17,9 @@ class Person
             print "Invalid phone number" 
             return false
         
-    getters //for all the instance variables
+    getters 
     
-    setters //for the first name, last name, phone number and money owed
-        //no setter for ID because it cannot be changed
+    setters 
         
     method toString return String
         return: "ID: " + ID
@@ -45,9 +44,9 @@ class Student extends Person
             print "Invalid grade"
             return fase
             
-    getters //for school name and grade
+    getters 
     
-    setters //for school name and grade
+    setters 
     
     method setStatus() void
         status equals "Student"
@@ -67,9 +66,9 @@ class External_Member extends Person
         organization equals org
         //constructor with 4 paramenters: parameters from Person constructor, job and organization
             
-    getters //for instance variables
+    getters 
     
-    setters //for instance variables
+    setters 
     
     method setStatus() void
         status equals "External Member"
@@ -89,7 +88,6 @@ class Movie
         producer equals prod
         ID equals (ID + 1)
         availability equals "Available"
-        //2 parameters: title of movie and producer
         
     method testYear(int year) return boolean 
         if(year less or equals 2023 and year more or equals 1895) //release year of the first movie
@@ -100,9 +98,9 @@ class Movie
             print "Invalid year"
             return false
         
-    getters //for all instance variables
+    getters 
     
-    setters //for all instance variables except ID
+    setters 
     
     method toString returns String
         return "Movie ID: " + movie ID
@@ -110,3 +108,8 @@ class Movie
                "Producer: " + producer
                "Release year: " + year of release
                "Availability: " + availability
+
+
+class Interface
+    method calculate(rent: Date, return: Date, String status) returns int
+        if(status equals "
