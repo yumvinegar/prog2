@@ -1,5 +1,6 @@
 class Person
-    insert data variables (instance variables): int ID equals 10000, String first name, String last name, String phone number
+    insert data variables (instance variables): int ID equals 10000, 
+    String first name, String last name, String phone number, int money owed
     
     constructor Person(fname String, lname String) 
         ID equals (ID + 1)
@@ -18,13 +19,14 @@ class Person
         
     getters //for all the instance variables
     
-    setters //for the first name, last name and phone number
+    setters //for the first name, last name, phone number and money owed
         //no setter for ID because it cannot be changed
         
     method toString return String
         return: "ID: " + ID
                 "Name: " + first name + last name
                 "Phone number: " + phone number
+                "Money owed: " + money owed
    
 class Student extends Person
     insert data variables (instance variables): String school name, int grade
