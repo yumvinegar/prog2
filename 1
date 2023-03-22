@@ -1,5 +1,5 @@
 class Person
-    insert data variables (instance variables): int ID, 
+    insert data variables (instance variables): int ID, int movieBorrowed
     String first name, String last name, int age, String phone number, int money owed
     
     constructor Person(id int, fname String, lname String, age int, phone String) 
@@ -170,6 +170,49 @@ main class Driver
                             print "ExternalMember added to the system"
                     break;
                     
-            case 3: 
+            case 3: print "View of all the movies: "
+                    for loop that goes through the movie ArrayList
+                            get toString method for each movie to print the information needed
+                    break;
                     
+            case 4: print "View of all the members: "
+                    for loop that goes through the Student ArrayList
+                            get toString method for each student to print the information needed
+                    for loop that goes through the External_Member ArrayList
+                            get toString method for each External_Member to print the information needed
+                    break;
+                    
+            case 5: print "Enter the ID of the person borrowing: "
+                    input the ID
+                    print "Enter the movie ID: "
+                    if movie avaialability equals "unavailable"
+                            print "Movie unavailable"
+                    for loop that goes through the Student ArrayList
+                            if ID of student equals ID entered and movie availability equals "Avaialble"
+                                    add ID of the movie to the movieBorrowed field of the Student
+                                    insert current date into the Date rent field of the movie
+                                    insert "Unavailable" into the availability field of the movie
+                    for loop that goes through the External_Member ArrayList
+                            if ID of External_Member equals ID entered and movie availability equals "Avaialble"
+                                    add ID of the movie to the movieBorrowed field of the External_Member
+                                    insert current date into the Date rent field of the movie
+                                    insert "Unavailable" into the availability field of the movie
+                    break;
                                     
+            case 6: print "Enter the ID of the person returning: "
+                    input the ID
+                    for loop that goes through the Student ArrayList
+                            if ID of student equals ID entered and field movie borrowed does not equal null
+                                    input current date into the field date returned
+                                    instantiate interface with date borrowed, date returned, and status of the member
+                                    get the price and insert it into the money field of the Student
+                                    set date borrowed and date returned as null. set movie borrowed as null
+                                    set availability of movie as "Available" 
+                    for loop that goes through the External_Member ArrayList
+                            if ID of External_Member equals ID entered and movie availability equals "Avaialble"
+                                    input current date into the field date returned
+                                    instantiate interface with date borrowed, date returned, and status of the member
+                                    get the price and insert it into the money field of the External_Member
+                                    set date borrowed and date returned as null. set movie borrowed as null
+                                    set availability of movie as "Available" 
+                    break;
