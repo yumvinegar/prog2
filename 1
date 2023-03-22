@@ -70,7 +70,7 @@ class External_Member extends Person
 
 class Movie
     insert data variables (instance variables): String title of movie, String producer, 
-    int movie ID equals 1, int year of release, String availability, Date rent date, Date return date
+    int movie ID equals 1, int year of release, String availability, Date rent date
     
     constructor Movie(String title, String prod, int id, int year)
         
@@ -203,14 +203,12 @@ main class Driver
                     input the ID
                     for loop that goes through the Student ArrayList
                             if ID of student equals ID entered and field movie borrowed does not equal null
-                                    input current date into the field date returned
                                     instantiate interface with date borrowed, date returned, and status of the member
                                     get the price and insert it into the money field of the Student
                                     set date borrowed and date returned as null. set movie borrowed as null
                                     set availability of movie as "Available" 
                     for loop that goes through the External_Member ArrayList
                             if ID of External_Member equals ID entered and movie availability equals "Avaialble"
-                                    input current date into the field date returned
                                     instantiate interface with date borrowed, date returned, and status of the member
                                     get the price and insert it into the money field of the External_Member
                                     set date borrowed and date returned as null. set movie borrowed as null
