@@ -1,12 +1,8 @@
 class Person
-    insert data variables (instance variables): int ID equals 10000, 
+    insert data variables (instance variables): int ID, 
     String first name, String last name, int age, String phone number, int money owed
     
-    constructor Person(fname String, lname String, age int) 
-        ID equals (ID + 1)
-        first name equals fname
-        last name equals lname
-        this age equals age
+    constructor Person(id int, fname String, lname String, age int) 
         
     method testPhone(phone String, s String) returns boolean
        if(characters in phone number equals 10 and (first 3 characters equal 514 or 438)
@@ -31,9 +27,6 @@ class Student extends Person
     insert data variables (instance variables): String school name, int grade
 
     constructor Student(fname String, lname String, school String)
-        super from Person
-        school name equals school
-        //constructor with 3 paramenters: parameters from Person constrcutor and school name
         
     method testGrade(g int) return boolean
         if(g is more or equal to 0 and g is less or equal to 100)
@@ -61,10 +54,6 @@ class External_Member extends Person
     insert data variables (instance variables): String job, String organization
 
     constructor External_Member(fname String, lname String, j String, org String)
-        super from Person
-        job equals j
-        organization equals org
-        //constructor with 4 paramenters: parameters from Person constructor, job and organization
             
     getters 
     
@@ -83,11 +72,7 @@ class Movie
     insert data variables (instance variables): String title of movie, String producer, 
     int movie ID equals 1, int year of release, String availability, Date rent date, Date return date
     
-    constructor Movie(String title, String prod)
-        title of movie equals title
-        producer equals prod
-        ID equals (ID + 1)
-        availability equals "Available"
+    constructor Movie(String title, String prod, int id, int year)
         
     method testYear(int year) return boolean 
         if(year less or equals 2023 and year more or equals 1895) //release year of the first movie
@@ -112,4 +97,42 @@ class Movie
 
 class Interface
     method calculate(rent: Date, return: Date, String status) returns int
-        if(status equals "
+        int total days equals return - rent (return = returnDate, rent = rentDate)
+        initialize the cost int
+        if status equals "Student"
+                return (total days - 7) multiplied by 1 + 5
+        if status equals "External member" 
+                return (total days - 7) multiplied by 2 + 10
+                
+                
+
+main class Driver
+    instantiate scanner
+    instantiate the ArrayLists for Movie, Student and External_Member classes
+    instantiate boolean flag and set to true
+    
+    //menu
+    while flag is true
+    print "Choose your option: 
+            1 - Enter a new movie into the system.
+            2 - Enter a new person into the system.
+            3 - Show all the movies.
+            4 - Show all the members.
+            5 - Borrow movie.
+            6 - Return movie.
+            7 - Exit.
+            Enter your choice: 
+    input your choice
+    implement switch for choice
+            case 1: print "Enter the movie ID: " 
+                    input the ID
+                    instantiate flag2 and set to true
+                    for loop passing through the Movie ArrayList
+                            if the ID is same as the ID in the loop
+                                    print "Movie already in the system"
+                                    set flag2 to false
+                    if flag2 equals false
+                            continue
+                    print all the instructions and enter the fields necessary for movie (title, producer, release year)
+                    
+                                    
