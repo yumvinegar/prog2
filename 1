@@ -2,7 +2,7 @@ class Person
     insert data variables (instance variables): int ID, 
     String first name, String last name, int age, String phone number, int money owed
     
-    constructor Person(id int, fname String, lname String, age int) 
+    constructor Person(id int, fname String, lname String, age int, phone String) 
         
     method testPhone(phone String, s String) returns boolean
        if(characters in phone number equals 10 and (first 3 characters equal 514 or 438)
@@ -26,7 +26,7 @@ class Person
 class Student extends Person
     insert data variables (instance variables): String school name, int grade
 
-    constructor Student(fname String, lname String, school String)
+    constructor Student(fname String, lname String, school String, grade int)
         
     method testGrade(g int) return boolean
         if(g is more or equal to 0 and g is less or equal to 100)
@@ -134,5 +134,42 @@ main class Driver
                     if flag2 equals false
                             continue
                     print all the instructions and enter the fields necessary for movie (title, producer, release year)
+                    test the year using the testYear method
+                    if testYear returns false
+                            continue
+                    instantiate the Movie object in the ArrayList and add insert all the values in the constructor 
+                    set avaialbility to "Available"
+                    print "The movie has been added"
+                    break
+             
+            case 2: print "Enter the person ID: " 
+                    input the ID
+                    instantiate flag2 and set to true
+                    for loop passing through the Student ArrayList
+                            if the ID is same as the ID in the loop
+                                    print "Student already in the system"
+                                    set flag2 to false
+                    for loop passing through the External_Member ArrayList
+                            if the ID is same as the ID in the loop
+                                    print "Member already in the system"
+                                    set flag2 to false
+                    if flag2 equals false
+                            continue
+                    print "Enter occupation: 1 - Student 2 - External_Member"
+                    if choose 1
+                            print all the instructions and enter the fields necessary for Student (fname, lname, age, school, grade, phone)
+                            use testPhone method to test the phone number. If return false, continue;
+                            instantiate the Student object in the ArrayList and add insert all the values in the constructor
+                            use setStatus method to set status to "Student"
+                            print "Student added to the system"
+                    if choose 2
+                            print all the instructions and enter the fields necessary for External_Member (fname, lname, age, org, job, phone)
+                            use testPhone method to test the phone number. If return false, continue;
+                            instantiate the External_Member object in the ArrayList and add insert all the values in the constructor
+                            use setStatus method to set status to "External Member"
+                            print "ExternalMember added to the system"
+                    break;
+                    
+            case 3: 
                     
                                     
